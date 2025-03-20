@@ -19,9 +19,14 @@ public class AgregarLibro extends javax.swing.JFrame {
     public AgregarLibro() {
          initComponents();
         this.setLocationRelativeTo(null);
+<<<<<<< HEAD
         try{
           this.setIconImage(new ImageIcon(getClass().getResource("/images/Biblioteca.png")).getImage());
 
+=======
+        try{ 
+            this.setIconImage(new ImageIcon(getclass().getResource("/autonoma/BibliotecaApp/images/Biblioteca.png"))); 
+>>>>>>> af08426f3dce6dbbaa734a2341db5eee3138a804
         }catch(Exception e){
             
         }
@@ -41,7 +46,7 @@ public class AgregarLibro extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 445, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -82,8 +87,13 @@ public class AgregarLibro extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new AgregarLibro().setVisible(true);
+                // viva el once caldas
             }
         });
+    }
+
+    private Object getclass() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
