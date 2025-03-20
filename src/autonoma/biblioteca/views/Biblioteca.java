@@ -19,7 +19,8 @@ public class Biblioteca extends javax.swing.JPanel {
         initComponents();
         this.setLocationRelativeTo(null);
         try{
-            this.setIconImage(new ImageIcon(getClass().getResource("/autonoma/BibliotecaApp/images/Biblioteca.png")));
+            this.setIconImage(new ImageIcon(getClass().getResource("/images/Biblioteca.png")));
+
         }catch(Exception e){
             
         }
@@ -75,3 +76,5 @@ public class Biblioteca extends javax.swing.JPanel {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
+
+
