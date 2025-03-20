@@ -20,7 +20,7 @@ public class AgregarLibro extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         try{ 
-            this.setIconImage(new ImageIcon(get class().getResource("/autonoma/BibliotecaApp/images/Biblioteca.png")));
+            this.setIconImage(new ImageIcon(get class().getResource("/autonoma/BibliotecaApp/images/Biblioteca.png"))getImage);
             
         }catch(Exception e){
             
@@ -83,6 +83,7 @@ public class AgregarLibro extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new AgregarLibro().setVisible(true);
+                // viva el once caldas
             }
         });
     }
