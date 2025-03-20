@@ -27,7 +27,7 @@ public class Biblioteca {
     }
 
 
-    public boolean agregarProducto(Libro libro){
+    public boolean agregarLibro(Libro libro){
         
         return this.libros.add(libro);
        
