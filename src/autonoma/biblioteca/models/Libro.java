@@ -35,6 +35,10 @@ public class Libro {
         this.titulo = titulo;
     }
 
+    Object getNombre() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 
 }
 

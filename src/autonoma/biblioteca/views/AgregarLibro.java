@@ -20,8 +20,7 @@ public class AgregarLibro extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         try{ 
-            this.setIconImage(new ImageIcon(get class().getResource("/autonoma/BibliotecaApp/images/Biblioteca.png"))getImage);
-            
+            this.setIconImage(new ImageIcon(getclass().getResource("/autonoma/BibliotecaApp/images/Biblioteca.png"))); 
         }catch(Exception e){
             
         }
@@ -42,7 +41,7 @@ public class AgregarLibro extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 445, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

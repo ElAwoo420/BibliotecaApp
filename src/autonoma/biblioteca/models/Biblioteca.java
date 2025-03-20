@@ -1,6 +1,7 @@
 package autonoma.biblioteca.models;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -16,75 +17,91 @@ public class Biblioteca {
         this.libros = new ArrayList<>();
     }
     
-    public boolean agregarLibro(Libro libro) {
-        if (libro != null) {
-            for (Libro l : libros) {
-                if (l.getId() == libro.getId()) {
-                    return false;
-                }
-            }
-            return libros.add(libro);
-        }
-        return false;
-    }
-    
-    public String mostrarLibros() {
-        if (libros.isEmpty()) {
-            return "No hay libros en la biblioteca.";
-        }
-        
-        StringBuilder sb = new StringBuilder("Lista de libros:\n");
-        for (Libro libro : libros) {
-            sb.append(libro.getId()).append(" - ").append(libro.getTitulo()).append("\n");
-        }
-        return sb.toString();
-    }
-    
-    public Libro buscarLibro(long id) {
-        for (Libro libro : libros) {
-            if (libro.getId() == id) {
-                return libro;
-            }
-        }
-        return null;
-    }
-    
-    public boolean actualizarLibro(long id, Libro libroActualizado) {
-        for (int i = 0; i < libros.size(); i++) {
-            if (libros.get(i).getId() == id) {
-                libros.set(i, libroActualizado);
-                return true;
-            }
-        }
-        return false;
-    }
-    
-    public boolean eliminarLibro(long id) {
-        for (int i = 0; i < libros.size(); i++) {
-            if (libros.get(i).getId() == id) {
-                libros.remove(i);
-                return true;
-            }
-        }
-        return false;
-    }
-    
-    public List<Libro> obtenerLibrosAlfabeticamente() {
-        List<Libro> librosOrdenados = new ArrayList<>(libros);
-        for (int i = 0; i < librosOrdenados.size() - 1; i++) {
-            for (int j = i + 1; j < librosOrdenados.size(); j++) {
-                if (librosOrdenados.get(i).getTitulo().compareToIgnoreCase(librosOrdenados.get(j).getTitulo()) > 0) {
-                    Libro temp = librosOrdenados.get(i);
-                    librosOrdenados.set(i, librosOrdenados.get(j));
-                    librosOrdenados.set(j, temp);
-                }
-            }
-        }
-        return librosOrdenados;
-    }
-    
-    public List<Libro> getLibros() {
+      public List<Libro> getLibros() {
         return libros;
     }
-}
+      
+    public void obtenerLibrosAlfabeticamente(){
+        List<Libro> librosOrdenados = new ArrayList<>(libros);
+        librosOrdenados.sort(Comparator.comparing(Libro::getTitulo));
+    }
 
+
+    public boolean agregarProducto(Libro libro){
+        
+        return this.libros.add(libro);
+       
+    }
+    
+   
+    public Libro buscarLibro(Libro libro){
+        
+        for(int i=0;i<this.libros.size();i++){
+            Libro l = this.libros.get(i);
+            if(l.equals(libro)){
+                return l;
+            }
+        }
+        return null;   
+    }
+    
+    public Libro buscarLibro(long id){
+        
+        for(int i=0;i<this.libros.size();i++){
+            Libro l = this.libros.get(i);
+            if(l.getId() == id){
+                return l;
+            }
+        }
+        return null;   
+    }
+    
+    public Libro buscarLibro(String nombre){
+        
+        for(int i=0;i<this.libros.size();i++){
+            Libro l = this.libros.get(i);
+            if(l.getNombre().equals(nombre)){
+                return l;
+            }
+        }
+        return null;   
+    }
+    
+   
+    public Libro actualizarLibro(long id, Libro libro)
+    {
+        int index = this.buscarIndiceLibro(id);
+        if(index>=0){
+            return this.libros.set(index, libro);
+        }else{
+            return null;
+        }
+    }
+    
+    
+    public Libro eliminarLibro(long id){
+        
+        int index = this.buscarIndiceLibro(id);
+        if(index>=0){
+            return this.libros.remove(index);
+        }else{
+            return null;
+        }
+    }
+    
+   
+    public String mostrarLibros(){
+        String mostrar = "";
+        for(int i=0;i<this.libros.size();i++){
+            Libro l = this.libros.get(i);
+            mostrar += l.toString()+"\n";
+        }
+        return mostrar;
+    }
+
+    private int buscarIndiceLibro(long id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    
+}
