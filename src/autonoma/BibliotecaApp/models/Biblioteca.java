@@ -1,4 +1,4 @@
-package autonoma.biblioteca.models;
+package autonoma.BibliotecaApp.models;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -102,6 +102,6 @@ public class Biblioteca {
     private int buscarIndiceLibro(long id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
-    
+
+ 
 }
