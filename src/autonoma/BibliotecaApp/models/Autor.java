@@ -29,18 +29,36 @@ public class Autor extends  Persona {
         this.profesion = profesion;
     }
 
+    /**
+     * obtener cual es la editorial del libro
+     * @return editorial
+     */
     public String getEditorial() {
         return editorial;
     }
 
+    /**
+     * para modificar la editorial, recibiendo como parametro ese mismo dato
+     * @param editorial 
+     */
     public void setEditorial(String editorial) {
         this.editorial = editorial;
     }
 
+    /**
+    *para obtener la profesión de la clase persona
+    * @param profesión
+    */
     public String getProfesion() {
         return profesion;
     }
 
+    /**
+     *  modificar la profesión de la clase persona
+     *  digamos se recibe inicialmente una profesión de valor
+     *  tipo String, la posibilidad de cambiar ese 1er dato
+     * @param profesion 
+     */
     public void setProfesion(String profesion) {
         this.profesion = profesion;
     }       
