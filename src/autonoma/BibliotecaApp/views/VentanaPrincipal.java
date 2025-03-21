@@ -254,8 +254,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      private void mouseExited(JPanel panel){
          panel.setBackground(new Color(200,255,255));
      }
-    
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JPanel1;
@@ -269,3 +267,4 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 
+}
