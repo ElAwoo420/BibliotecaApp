@@ -102,15 +102,4 @@ public class Biblioteca {
     private int buscarIndiceLibro(long id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-<<<<<<< HEAD:src/autonoma/BibliotecaApp/models/Biblioteca.java
-
- 
-=======
-    
-    
-<<<<<<< HEAD
->>>>>>> 7eb93b0920eec8c3400d0c5f8434f14c8b7d4730:src/autonoma/biblioteca/models/Biblioteca.java
 }
-=======
-}
->>>>>>> af08426f3dce6dbbaa734a2341db5eee3138a804

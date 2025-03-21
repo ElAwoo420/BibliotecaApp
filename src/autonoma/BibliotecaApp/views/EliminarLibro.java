@@ -20,12 +20,7 @@ private VentanaPrincipal biblioteca;
         initComponents();
         this.setLocationRelativeTo(null);
         try{
-<<<<<<< HEAD:src/autonoma/BibliotecaApp/views/EliminarLibro.java
             this.setIconImage(new ImageIcon(getClass().getResource("/autonoma/BibliotecaApp/images/Biblioteca.png")).getImage());
-=======
-            this.setIconImage(new ImageIcon(getClass().getResource("/images/Biblioteca.png")));
-
->>>>>>> 7eb93b0920eec8c3400d0c5f8434f14c8b7d4730:src/autonoma/biblioteca/views/Biblioteca.java
         }catch(Exception e){
             
         }
